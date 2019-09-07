@@ -23,7 +23,7 @@ public class RunningSession {
     private LocalDate date;
 
     @ManyToOne
-    @JoinColumn(name = "USER_ID", foreignKey = @ForeignKey(name = "USER_ID_FK"))
+    @JoinColumn(name = "USER_LOGIN", foreignKey = @ForeignKey(name = "USER_LOGIN_FK"))
     private User user;
 
     public int getId() {
