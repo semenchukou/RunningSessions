@@ -19,6 +19,15 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    public User() {
+        this.login = "";
+        this.password = "";
+    }
+
+    public User(String login) {
+        this.login = "";
+    }
+
     public String getLogin() {
         return login;
     }

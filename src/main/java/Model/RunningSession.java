@@ -1,5 +1,6 @@
 package Model;
 
+import javax.jws.soap.SOAPBinding;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -23,8 +24,8 @@ public class RunningSession {
     private LocalDate date;
 
     @ManyToOne
-    @JoinColumn(name = "USER_LOGIN", foreignKey = @ForeignKey(name = "USER_LOGIN_FK"))
-    private User user;
+    @JoinColumn(name = "LOGIN", foreignKey = @ForeignKey(name = "USER_LOGIN_FK"))
+    private User login;
 
     public int getId() {
         return id;
@@ -58,11 +59,11 @@ public class RunningSession {
         this.date = date;
     }
 
-    public User getUser() {
-        return user;
+    public User getLogin() {
+        return login;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setLogin(User login) {
+        this.login = login;
     }
 }

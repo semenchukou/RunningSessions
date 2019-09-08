@@ -3,7 +3,8 @@ package Repository;
 import Model.User;
 import org.springframework.data.repository.CrudRepository;
 
-//@Repository
+import java.util.Optional;
+
 public interface UserRepository extends CrudRepository<User, String> {
-    User findByLogin(String login);
+    Optional<User> findByLogin(String login);
 }
