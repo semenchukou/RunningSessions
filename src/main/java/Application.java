@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages = {"Controller"})
-@EnableAutoConfiguration(exclude = { SecurityAutoConfiguration.class, ManagementWebSecurityAutoConfiguration.class})
+@EnableAutoConfiguration(exclude = { SecurityAutoConfiguration.class /*, ManagementWebSecurityAutoConfiguration.class*/})
 @EnableJpaRepositories(basePackages = {"Repository"})
 @EntityScan("Model")
 public class Application {
